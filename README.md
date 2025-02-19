@@ -38,4 +38,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 neondb para rodar o postgres online
 colar a url dele no .env
-npx prisma migrate dev - conecta no banco com migrations
+npx prisma migrate dev - conecta no banco com migrations, necessario usar sempre que alterar o prisma
