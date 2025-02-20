@@ -42,3 +42,4 @@ npx prisma migrate dev - conecta no banco com migrations, necessario usar sempre
 
 npx shadcn@2.3.0 
 importa components separados tipo o button
+
