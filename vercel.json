@@ -1,8 +1,9 @@
 {
-    "rewrites": [
+    "redirects": [
       {
         "source": "/",
-        "destination": "/fws-donalds"
+        "destination": "/fws-donalds",
+        "permanent": true
       }
     ]
   }
