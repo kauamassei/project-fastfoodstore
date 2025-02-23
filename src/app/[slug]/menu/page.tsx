@@ -1,7 +1,6 @@
-import { Button } from "@/components/ui/button";
+
 import { db } from "@/lib/prisma";
-import { ChevronsLeftIcon, ScrollTextIcon } from "lucide-react";
-import Image from "next/image";
+
 import { notFound } from "next/navigation";
 import RestaurantHeader from "./components/header";
 import RestaurantCategories from "./components/categories";

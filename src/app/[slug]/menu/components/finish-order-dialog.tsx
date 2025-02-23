@@ -29,7 +29,7 @@ import { Input } from "@/components/ui/input";
 import { createOrder } from "../actions/create-order";
 import { useParams, useSearchParams } from "next/navigation";
 import { ConsumptionMethod } from "@prisma/client";
-import { startTransition, useContext, useTransition } from "react";
+import { useContext, useTransition } from "react";
 import { CartContext } from "../contexts/cart";
 import { toast } from "sonner";
 import { Loader2Icon } from "lucide-react";
