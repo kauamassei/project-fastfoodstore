@@ -35,20 +35,18 @@ import { toast } from "sonner";
 import { Loader2Icon } from "lucide-react";
 
 const formSchema = z.object({
-  name: z
+  name: z.string().trim().min(1, {
+    message: "O nome é obrigatório.",
+  }),
+  cpf: z
     .string()
     .trim()
     .min(1, {
       message: "O CPF é obrigatório.",
     })
-    .trim()
-    .min(1, {
-      message: "O nome é obrigatório.",
+    .refine((value) => isValidCpf(value), {
+      message: "CPF inválido.",
     }),
-
-  cpf: z.string().refine((value) => isValidCpf(value), {
-    message: "CPF inválido",
-  }),
 });
 
 type FormSchema = z.infer<typeof formSchema>;
@@ -90,7 +88,6 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
         onOpenChange(false);
         toast.success("Pedido finalizado com sucesso!");
       });
-      
     } catch (error) {
       console.error(error);
     }
